@@ -1,0 +1,84 @@
+<div class="twelve columns">
+  <p style="font-size: 25px; font-weight: bold">
+    <span
+      style="font-size: 25px; font-weight: bold; float: right"
+      >{{ iSUNM }}</span
+    >
+  </p>
+  <div style="margin-top: 10px; background-color: #fff6eb; padding: 10px">
+    <label
+      style="margin-left: 11px; font-size: 20px; color: red"
+      soho-label
+      for="socode"
+      >Distribution Order:<span
+        style="
+          font-size: 20px;
+          margin-left: 35px;
+          color: red;
+          font-weight: bold;
+        "
+        >{{ iRIDN }}</span
+      >
+    </label>
+
+    <label
+      style="margin-left: 154px; font-size: 20px; margin-top: 30px"
+      soho-label
+      for="socode"
+      >Net Weighbridge Weight:<span
+        ><input
+          style="
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 36px;
+            width: 200px;
+          "
+          autocomplete="doNotAutoComplete"
+          [readonly]="isReadOnly"
+          (change)="cUCA3($event)"
+          oninput="this.value = this.value.toUpperCase()"
+          [(ngModel)]="iWGHT"
+          maxlength="20"
+          soho-field-options
+          name="product-lookup"
+          type="text"
+        /><span
+          ><span style="margin-left: 5px">{{ oUCA3 }}</span></span
+        ></span
+      >
+    </label>
+
+    <label style="margin-left: 257px; font-size: 20px" soho-label for="socode"
+      >No of Boxes:<span
+        ><input
+          style="
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 36px;
+            width: 200px;
+          "
+          autocomplete="doNotAutoComplete"
+          oninput="this.value = this.value.toUpperCase()"
+          [(ngModel)]="iBOXS"
+          [readonly]="isReadOnly"
+          soho-field-options
+          maxlength="20"
+          (change)="cUCA4($event)"
+          name="product-lookup"
+          type="text"
+        /><span *ngIf="acamu"
+          ><span style="margin-left: 5px">{{ oUCA4 }}</span></span
+        ></span
+      >
+    </label>
+
+    <button
+      style="margin-left: 15px; float: right; margin-top: -45px"
+      (click)="createPallets()"
+       soho-button="secondary"
+      title="New"
+    >
+      Create Pallets
+    </button>
+  </div>
+</div>
